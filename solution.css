@@ -1,0 +1,15 @@
+One possible solution is to avoid setting `pointer-events: none` on the element and instead use another method to prevent it from responding to mouse events. For example, we can use `z-index` to layer elements.  Make sure the blurred element is behind any elements that need to receive events.  Below is an illustration. Instead of using a single element with both pointer-events and blur, use two separate elements.  One for the blurred element and one on top to receive the pointer events.
+
+```css
+/* solution.css */
+.blurred-element {
+  filter: blur(5px);
+  /* other styles */
+}
+
+.overlay {
+  /* styles for the overlay element */
+  position: relative;
+  z-index: 1; /* Ensures overlay is on top */
+}
+```
