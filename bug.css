@@ -1,0 +1,1 @@
+The CSS property `filter: blur()` is applied to an element with the `pointer-events: none;` property.  This causes the blur effect to be rendered incorrectly or not at all in some browsers.  The blur might be partially visible, completely invisible, or appear differently than intended.
